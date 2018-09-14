@@ -23,13 +23,16 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
 from numpy import ndarray
+from typing import List, Any
+
 
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-class CriterionType:
+class Criterion:
     """
-    This is an abstract class that represents a generic criterion type that must maximize or minimize.
+    This is an abstract class that represents a generic criterion that must maximize or minimize. Moreover, a criterion
+    can work a normalized values of the original values.
 
     Inheriting classes must override the 'compute_pref' method.
     """
@@ -41,17 +44,19 @@ class CriterionType:
 
 
     # -------------------------------------------------------------------------
-    def __init__(self, name: str, type: int):
+    def __init__(self, name: str, type: int, normalized: bool):
         """
         Constructor.
 
         :param name: Name of the criterion.
         :param type: Type of the criterion (Maximize or Minimize).
+        :param normalized: Works the criterion on normalized values?
         """
         self.name = name
         if (type != self.Minimize) and (type != self.Maximize):
             raise ValueError("Only 'Maximize' and 'Minimize' are allowed.")
         self.type=type
+        self.normalized = normalized
 
 
     # -------------------------------------------------------------------------
@@ -62,7 +67,7 @@ class CriterionType:
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-class LinearCriterion(CriterionType):
+class LinearCriterion(Criterion):
     """
     The criterion type class implements the classic linear method. It is defined by two parameters 'p' and 'q':
 
@@ -82,7 +87,7 @@ class LinearCriterion(CriterionType):
         :param p: Value of the 'p' parameter.
         :param q: Value of the 'q' parameter.
         """
-        CriterionType.__init__(self, name, type)
+        Criterion.__init__(self, name=name, type=type, normalized=True)
         self.p = p
         self.q = q
 
@@ -105,7 +110,7 @@ class LinearCriterion(CriterionType):
 
         # One solution is better than the other one
         if d >= self.p:
-            if self.type == CriterionType.Maximize:
+            if self.type == Criterion.Maximize:
                 if u > v:
                     return 1.0
                 else:
@@ -117,7 +122,7 @@ class LinearCriterion(CriterionType):
                     return 0.0
 
         # Between q and p -> Compute the preference.
-        if self.type == CriterionType.Maximize:
+        if self.type == Criterion.Maximize:
             if u > v:
                 return (d - self.q) / (self.p - self.q)
             else:
@@ -143,7 +148,7 @@ class CriterionSolutionValue:
     fi: float
     fi_plus: float
     fi_minus: float
-    normalized: float
+    used_value: float
     value: float
 
 
@@ -156,21 +161,21 @@ class CriterionSolutionValue:
         self.fi_plus = 0.0
         self.fi_minus = 0.0
         self.value = 0.0
-        self.normalized = 0.0
+        self.used_value = 0.0
 
 
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-class Criterion:
+class KernelCriterion:
     """
     This class represents a given criterion defined by a type and a set of values for each solutions.
     """
 
 
     # -------------------------------------------------------------------------
-    type: CriterionType
-
+    criterion: Criterion
+    values: List[CriterionSolutionValue]
 
     # -------------------------------------------------------------------------
     def __init__(self, id: int, nb_solutions: int):
@@ -181,7 +186,7 @@ class Criterion:
         :param nb_solutions: Number of solutions.
         """
         self.id = id
-        self.type = None
+        self.criterion = None
         self.weight = 0.0
         self.nb_solutions = nb_solutions
         self.values = []
@@ -196,20 +201,28 @@ class Criterion:
 
         :return: nothing.
         """
+        if self.criterion.normalized:
+            # Compute minimum and maximum values
+            min = max = self.values[0].value
+            for i in range(1, self.nb_solutions):
+                if max < self.values[i].value:
+                    max = self.values[i].value
+                if min > self.values[i].value:
+                    min = self.values[i].value
+            diff = max - min
 
-        # Compute minimum and maximum values
-        min = max = self.values[0].value
-        for i in range(1, self.nb_solutions):
-            if max < self.values[i].value:
-                max = self.values[i].value
-            if min > self.values[i].value:
-                min = self.values[i].value
-        diff = max - min
-
-        # Normalize
-        if diff != 0.0:
+            # Normalize
+            if diff != 0.0:
+                for i in range(0, self.nb_solutions):
+                    self.values[i].used_value = (self.values[i].value - min) / diff
+            else:
+                # All values identical -> Set them to 1.0
+                for i in range(0, self.nb_solutions):
+                    self.values[i].used_value = 1.0
+        else:
+            # No normalization -> Simply copy 'original_value' in 'value'.
             for i in range(0, self.nb_solutions):
-                self.values[i].normalized = (self.values[i].value - min) / diff
+                self.values[i].used_value = self.values[i].value
 
 
     # -------------------------------------------------------------------------
@@ -226,8 +239,8 @@ class Criterion:
             for (sol2, val2) in zip(kernel.solutions, self.values):
                 if sol1.id == sol2.id:
                     continue
-                val1.fi_plus += self.type.compute_pref(val1.normalized, val2.normalized)
-                val1.fi_minus += self.type.compute_pref(val2.normalized, val1.normalized)
+                val1.fi_plus += self.criterion.compute_pref(val1.used_value, val2.used_value)
+                val1.fi_minus += self.criterion.compute_pref(val2.used_value, val1.used_value)
 
         for val in self.values:
             val.fi = val.fi_plus - val.fi_minus
@@ -244,6 +257,7 @@ class Solution:
 
     # -------------------------------------------------------------------------
     fi: float
+    values: List[CriterionSolutionValue]
 
 
     # -------------------------------------------------------------------------
@@ -310,7 +324,7 @@ class Kernel:
         # Criteria
         self.criteria = []
         for criterion_id in range(0, self.nb_criteria):
-            criterion = Criterion(criterion_id, self.nb_solutions)
+            criterion = KernelCriterion(criterion_id, self.nb_solutions)
             self.criteria.append(criterion)
             for (solution, value) in zip(self.solutions, criterion.values):
                 solution.values.append(value)
@@ -330,7 +344,7 @@ class Kernel:
 
 
     # -------------------------------------------------------------------------
-    def set_criterion(self, id: int, weight: float, type: CriterionType) -> None:
+    def set_criterion(self, id: int, weight: float, type: Criterion) -> None:
         """
         Assign a type and a weigth to a given criterion.
 
@@ -339,7 +353,7 @@ class Kernel:
         :param type: Type of the criterion (must be an inheriting class of 'CriterionType').
         :return: nothing
         """
-        self.criteria[id].type = type
+        self.criteria[id].criterion = type
         self.criteria[id].weight = weight
 
 
@@ -364,13 +378,15 @@ class Kernel:
         # Compute the flow for each solution
         for solution in self.solutions:
             solution.fi_minus = solution.fi_plus = 0.0
-            for val in solution.values:
-                solution.fi_plus += val.fi_plus
-                solution.fi_minus += val.fi_minus
+            for (criterion,val) in zip(self.criteria,solution.values):
+                solution.fi_plus += criterion.weight * val.fi_plus
+                solution.fi_minus += criterion.weight * val.fi_minus
             solution.fi_plus /= total_weight * (len(self.solutions) - 1)
             solution.fi_minus /= total_weight * (len(self.solutions) - 1)
             solution.fi = solution.fi_plus - solution.fi_minus
 
         # Rank the solutions by fitness
-        self.ordered_solutions = self.solutions
+        self.ordered_solutions = []
+        for solution in self.solutions:
+            self.ordered_solutions.append(solution)
         self.ordered_solutions.sort(reverse=True, key=lambda solution: solution.fi)
