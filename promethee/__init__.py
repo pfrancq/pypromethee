@@ -126,7 +126,7 @@ class LinearCriterion(Criterion):
             if u > v:
                 return (d - self.q) / (self.p - self.q)
             else:
-                return 0
+                return 0.0
         else: # self.type == PromCriterionType.Minimize
             if u < v:
                 return (d - self.q) / (self.p - self.q);

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e25c957a-4b9f-47b0-8692-9aa0b9553bc8" name="Default Changelist" comment="" />
+    <list default="true" id="e25c957a-4b9f-47b0-8692-9aa0b9553bc8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promethee/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/promethee/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promethee/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/promethee/tests/__init__.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,16 +13,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/promethee$Test.coverage" NAME="Test Coverage Results" MODIFIED="1536915207561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/promethee/tests" />
+    <SUITE FILE_PATH="coverage/promethee$Test.coverage" NAME="Test Coverage Results" MODIFIED="1537538048053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/promethee/tests" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-937000313">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -33,14 +38,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="Python Console" value="13" />
           <entry key="dummy" value="52" />
-          <entry key="py" value="1282" />
+          <entry key="py" value="1521" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="52" />
-          <entry key="Python" value="1282" />
+          <entry key="Python" value="1534" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -52,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/promethee/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="390" column="51" selection-start-line="390" selection-start-column="51" selection-end-line="390" selection-end-column="51" />
+            <state relative-caret-position="3270">
+              <caret line="219" selection-start-line="219" selection-end-line="219" />
               <folding>
                 <element signature="e#1226#1251#0" expanded="true" />
               </folding>
@@ -64,11 +70,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/promethee/tests/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="525">
+              <caret line="35" lean-forward="true" selection-start-line="31" selection-end-line="35" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
-                <marker date="1536915207328" expanded="true" signature="130:140" ph="..." />
+                <marker date="1537538047829" expanded="true" signature="157:167" ph="..." />
               </folding>
             </state>
           </provider>
@@ -108,10 +114,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1916" />
+    <option name="x" value="-4" />
     <option name="y" value="-4" />
     <option name="width" value="1928" />
-    <option name="height" value="1208" />
+    <option name="height" value="1176" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -208,8 +214,27 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -222,15 +247,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1916" y="-4" width="1928" height="1208" extended-state="6" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1928" height="1176" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.171459" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299539" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32953465" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -239,14 +263,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3299539" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3299539" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3299539" />
-      <window_info anchor="right" x="0" y="0" width="432" height="1008" id="Documentation" side_tool="true" weight="0.32960597" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" x="0" y="0" width="432" height="1008" id="Documentation" order="5" side_tool="true" visible="true" weight="0.32960597" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +280,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/promethee/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3270">
+          <caret line="219" selection-start-line="219" selection-end-line="219" />
+          <folding>
+            <element signature="e#1226#1251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -263,23 +297,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="390" column="51" selection-start-line="390" selection-start-column="51" selection-end-line="390" selection-end-column="51" />
-          <folding>
-            <element signature="e#1226#1251#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/promethee/tests/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="31" selection-end-line="35" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
-            <marker date="1536915207328" expanded="true" signature="130:140" ph="..." />
+            <marker date="1537538047829" expanded="true" signature="157:167" ph="..." />
           </folding>
         </state>
       </provider>
