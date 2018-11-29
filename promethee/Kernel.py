@@ -137,6 +137,12 @@ class Kernel:
         :return: nothing
         """
 
+        if (self.nb_solutions < 2) or (self.nb_criteria==0):
+            self.ordered_solutions = []
+            for solution in self.solutions:
+                self.ordered_solutions.append(solution)
+            return
+
         self._assign_values(matrix)
 
         # Compute fi for each criterion
