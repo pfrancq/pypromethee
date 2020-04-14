@@ -22,6 +22,22 @@
 
 
 # ----------------------------------------------------------------------------------------------------------------------
+import abc
+from enum import Enum
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+class CriterionType(Enum):
+    """
+    Define the type of a criterion.
+
+    Actually, only linear criteria are supported (to maximize or minimized)
+    """
+    LinearMaximize = 1
+    LinearMinimize = 2
+
+
+# ----------------------------------------------------------------------------------------------------------------------
 class Criterion:
     """
     This is an abstract class that represents a generic criterion that must maximize or minimize. Moreover, a criterion
@@ -35,20 +51,19 @@ class Criterion:
 
     name:
         Name of the criterion.
-
-    type:
+    criterion:
         Type of the criterion. It defines if the criterion must be maximised or minimised.
-
     normalized:
         Need the criterion a normalisation of its values for the different solution.
     """
 
     # -------------------------------------------------------------------------
-    Maximize: int = 1
-    Minimize: int = 2
+    name: str
+    type: CriterionType
+    normalized: bool
 
     # -------------------------------------------------------------------------
-    def __init__(self, name: str, type: int, normalized: bool):
+    def __init__(self, name: str, type: CriterionType, normalized: bool):
         """
         Constructor.
 
@@ -60,11 +75,26 @@ class Criterion:
         """
 
         self.name = name
-        if (type != self.Minimize) and (type != self.Maximize):
-            raise ValueError("Only 'Maximize' and 'Minimize' are allowed.")
-        self.type=type
+        self.type = type
         self.normalized = normalized
 
     # -------------------------------------------------------------------------
-    # @abc.abstractmethod
-    def compute_pref(self, u: float, v: float) -> float: pass
+    def apply_config(self, config: dict) -> bool:
+        """
+        Look in a dictionary contains some entries related to parameters.
+
+        :param config: Configuration dictionary.
+        """
+        pass
+
+    # -------------------------------------------------------------------------
+    @abc.abstractmethod
+    def compute_pref(self, u: float, v: float) -> float:
+        """
+        Compute the preference between two values of the criterion.
+
+        :param u: Value used as reference.
+        :param v: Value used to compare.
+        :return: a number between [0,1] that represents if 'u' is a better criterion value that 'v'.
+        """
+        pass

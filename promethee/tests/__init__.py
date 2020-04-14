@@ -25,7 +25,8 @@
 from unittest import TestCase
 from promethee.Kernel import Kernel
 from promethee.LinearCriterion import LinearCriterion
-import numpy as np;
+from promethee.Criterion import CriterionType
+import numpy as np
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -44,19 +45,21 @@ class TestPROMETHEE(TestCase):
 
         :return: Nothing.
         """
-
-        matrix =  a = np.matrix('8.75 6.2 1 30; 13.75 7.5 1 50; 25 8 3 80; 62.5 20 2 120')
+        config = {
+            "Price": {"weight": 1.0, "p": 0.2, "q": 0.05},
+            "Cons": {"weight": 1.0, "p": 0.2, "q": 0.05},
+            "Comfort": {"weight": 1.0, "p": 0.2, "q": 0.05},
+            "Power": {"weight": weight_power, "p": 0.2, "q": 0.05},
+        }
+        matrix = a = np.matrix('8.75 6.2 1 30; 13.75 7.5 1 50; 25 8 3 80; 62.5 20 2 120')
         print(matrix)
 
         kernel = Kernel(nb_criteria=4, nb_solutions=4)
-        kernel.set_criterion(0, 1.0,
-                             LinearCriterion(name="Price", type=LinearCriterion.Minimize, p=0.2, q=0.05))
-        kernel.set_criterion(1, 1.0,
-                             LinearCriterion(name="Cons", type=LinearCriterion.Minimize, p=0.2, q=0.05))
-        kernel.set_criterion(2, 1.0,
-                             LinearCriterion(name="Comfort", type=LinearCriterion.Maximize, p=0.2, q=0.05))
-        kernel.set_criterion(3, weight_power,
-                             LinearCriterion(name="Power", type=LinearCriterion.Maximize, p=0.2, q=0.05))
+        kernel.set_criterion(id=0, criterion=LinearCriterion(name="Price", type=CriterionType.LinearMinimize))
+        kernel.set_criterion(id=1, criterion=LinearCriterion(name="Cons", type=CriterionType.LinearMinimize))
+        kernel.set_criterion(id=2, criterion=LinearCriterion(name="Comfort", type=CriterionType.LinearMaximize))
+        kernel.set_criterion(id=3, criterion=LinearCriterion(name="Power", type=CriterionType.LinearMaximize))
+        kernel.apply_config(config=config)
         kernel.rank(matrix)
 
         print()

@@ -23,7 +23,7 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
 from numpy import ndarray
-from promethee.Criterion import Criterion
+from promethee.Criterion import Criterion, CriterionType
 from promethee.Solution import Solution
 from promethee.KernelCriterion import KernelCriterion
 
@@ -38,7 +38,7 @@ class Kernel:
     In practice, to be used, the following steps must be done:
 
     - Create a new kernel while specifying the number of solutions and criteria.
-    - For each criterion, use the 'set_criterion' method to set its type by using the corresponding identifier.
+    - For each criterion, use the 'set_criterion' method to set its criterion by using the corresponding identifier.
     - Call the rank method with a matrix (solutions,criteria) containing the values of the solutions for each criteria.
     - Use the 'Kernel.ordered_solutions' to obtain the identifiers of the ranked solutions.
 
@@ -71,7 +71,7 @@ class Kernel:
         List of solutions.
 
     ordered_solutions:
-        Ordered list of solutions after the rankinh.
+        Ordered list of solutions after the ranking.
     """
 
     # -------------------------------------------------------------------------
@@ -115,18 +115,36 @@ class Kernel:
                 criterion.values[solution_id].value = matrix[solution_id, criterion.id]
 
     # -------------------------------------------------------------------------
-    def set_criterion(self, id: int, weight: float, type: Criterion) -> None:
+    def set_criterion(self, id: int, criterion: Criterion, weight: float = 0.0) -> Criterion:
         """
-        Assign a type and a weigth to a given criterion.
+        Assign a type and a weight to a given criterion.
 
         :param id: Identifier of the criterion.
+        :param criterion: Criterion (must be an inheriting class of 'Criterion').
         :param weight: Weight of the criterion.
-        :param type: Type of the criterion (must be an inheriting class of 'CriterionType').
-        :return: nothing
+        :return: the criterion.
         """
 
-        self.criteria[id].criterion = type
+        self.criteria[id].criterion = criterion
         self.criteria[id].weight = weight
+        return criterion
+
+    # -------------------------------------------------------------------------
+    def apply_config(self, config: dict) -> bool:
+        """
+        Look in a dictionary if some entries corresponds to criteria parameters. It is supposed that the
+        dictionary has an entry named after each criterion and that its value is itself a dictionary with one
+        (entry, value) pair for each parameter
+
+        :param config: Configuration dictionary.
+        """
+        for criterion in self.criteria:
+            if criterion.criterion.name not in config:
+                continue
+            criterion_dict = config[criterion.criterion.name]
+            criterion.criterion.apply_config(config=criterion_dict)
+            if "weight" in criterion_dict:
+                criterion.weight = float(criterion_dict["weight"])
 
     # -------------------------------------------------------------------------
     def rank(self, matrix: ndarray) -> None:

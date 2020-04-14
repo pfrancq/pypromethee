@@ -8,4 +8,5 @@ setup(name='promethee',
       author_email='pascal@francq.info',
       license='GNU LGPL',
       packages=['promethee'],
+      install_requires=["numpy"],
       zip_safe=False)

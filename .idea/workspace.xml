@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e25c957a-4b9f-47b0-8692-9aa0b9553bc8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/promethee.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/promethee.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promethee/Criterion.py" beforeDir="false" afterPath="$PROJECT_DIR$/promethee/Criterion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/promethee/Kernel.py" beforeDir="false" afterPath="$PROJECT_DIR$/promethee/Kernel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promethee/KernelCriterion.py" beforeDir="false" afterPath="$PROJECT_DIR$/promethee/KernelCriterion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promethee/LinearCriterion.py" beforeDir="false" afterPath="$PROJECT_DIR$/promethee/LinearCriterion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/promethee/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/promethee/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,125 +20,6 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/promethee$Test.coverage" NAME="Test Coverage Results" MODIFIED="1538066692691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/promethee/tests" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-937000313">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.1" value="6" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="Python Console" value="13" />
-          <entry key="dummy" value="70" />
-          <entry key="py" value="3325" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="70" />
-          <entry key="Python" value="3338" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.vcs.git.usages" />
-      <usages-collector id="statistics.js.language.service.starts" />
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promethee/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promethee/tests/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#1226#1255#0" expanded="true" />
-                <marker date="1538066692576" expanded="true" signature="1974:1984" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/promethee/Kernel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="142" column="55" selection-start-line="142" selection-start-column="55" selection-end-line="142" selection-end-column="55" />
-              <folding>
-                <element signature="e#1226#1251#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promethee/Solution.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#1226#1249#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promethee/KernelCriterion.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#1226#1249#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promethee/LinearCriterion.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="41" selection-start-line="24" selection-end-line="24" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/promethee/Criterion.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -140,90 +27,31 @@
       </list>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/promethee/Criterion.py" />
-        <option value="$PROJECT_DIR$/promethee/LinearCriterion.py" />
-        <option value="$PROJECT_DIR$/promethee/KernelCriterion.py" />
-        <option value="$PROJECT_DIR$/promethee/Solution.py" />
-        <option value="$PROJECT_DIR$/promethee/__init__.py" />
-        <option value="$PROJECT_DIR$/promethee/tests/__init__.py" />
-        <option value="$PROJECT_DIR$/promethee/Kernel.py" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1916" />
-    <option name="y" value="-4" />
-    <option name="width" value="1928" />
-    <option name="height" value="1208" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="promethee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="promethee" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="promethee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="promethee" type="462c0819:PsiDirectoryNode" />
-              <item name="promethee" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="promethee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="promethee" type="462c0819:PsiDirectoryNode" />
-              <item name="promethee" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1aWMW31dIWrKjSXuzvU0jWvAIPx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/promethee/tests/__init__.py" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
     <configuration name="Test" type="PythonConfigurationType" factoryName="Python">
       <module name="promethee" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/promethee/tests" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -232,7 +60,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/promethee/tests/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -290,110 +118,89 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536908644060</updated>
+      <workItem from="1586846928019" duration="5706000" />
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1916" y="-4" width="1928" height="1208" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17944622" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32953465" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3299539" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32953465" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" x="0" y="0" width="432" height="1008" id="Documentation" order="5" side_tool="true" visible="true" weight="0.32960597" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- Add a 'CriterionType' rather than using int.&#10;- Change the order of parameters in 'Kernel.set_criterion'.&#10;- Add default parameters to the 'LinearCriterion' constructor and 'Kernel.set_criterion'.&#10;- Add a mechanism to set parameters using a configuration dictionary." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add a 'CriterionType' rather than using int.&#10;- Change the order of parameters in 'Kernel.set_criterion'.&#10;- Add default parameters to the 'LinearCriterion' constructor and 'Kernel.set_criterion'.&#10;- Add a mechanism to set parameters using a configuration dictionary." />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1226#1255#0" expanded="true" />
-            <marker date="1538066692576" expanded="true" signature="1974:1984" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/Solution.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#1226#1249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/KernelCriterion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#1226#1249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/LinearCriterion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="41" selection-start-line="24" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/Criterion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/promethee/Kernel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="142" column="55" selection-start-line="142" selection-start-column="55" selection-end-line="142" selection-end-column="55" />
-          <folding>
-            <element signature="e#1226#1251#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="419" y="241" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586849797304">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state x="419" y="241" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586849797304" />
+    <state x="613" y="189" key="CommitChangelistDialog2" timestamp="1586852570621">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state x="613" y="189" key="CommitChangelistDialog2/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852570621" />
+    <state x="743" y="341" key="FileChooserDialogImpl" timestamp="1586849579018">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state x="743" y="341" key="FileChooserDialogImpl/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586849579018" />
+    <state width="1874" height="392" key="GridCell.Tab.0.bottom" timestamp="1586852307118">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.0.bottom/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852307118" />
+    <state width="1874" height="392" key="GridCell.Tab.0.center" timestamp="1586852307118">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.0.center/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852307118" />
+    <state width="1874" height="392" key="GridCell.Tab.0.left" timestamp="1586852307118">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.0.left/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852307118" />
+    <state width="1874" height="392" key="GridCell.Tab.0.right" timestamp="1586852307118">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.0.right/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852307118" />
+    <state width="1874" height="392" key="GridCell.Tab.1.bottom" timestamp="1586852342673">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.1.bottom/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852342673" />
+    <state width="1874" height="392" key="GridCell.Tab.1.center" timestamp="1586852342672">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.1.center/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852342672" />
+    <state width="1874" height="392" key="GridCell.Tab.1.left" timestamp="1586852342672">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.1.left/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852342672" />
+    <state width="1874" height="392" key="GridCell.Tab.1.right" timestamp="1586852342673">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state width="1874" height="392" key="GridCell.Tab.1.right/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852342673" />
+    <state x="457" y="218" key="SettingsEditor" timestamp="1586847805397">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state x="457" y="218" key="SettingsEditor/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586847805397" />
+    <state x="506" y="295" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1586852068914">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state x="506" y="295" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852068914" />
+    <state x="657" y="479" key="svn.passwordDialog" timestamp="1586852669870">
+      <screen x="0" y="0" width="1920" height="1168" />
+    </state>
+    <state x="657" y="479" key="svn.passwordDialog/0.0.1920.1168/1920.0.1920.1200@0.0.1920.1168" timestamp="1586852669870" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="python-exception">
+          <properties notifyOnlyOnFirst="true" notifyOnTerminate="true" ignoreLibraries="true" exception="BaseException">
+            <option name="ignoreLibraries" value="true" />
+            <option name="notifyOnTerminate" value="true" />
+            <option name="notifyOnlyOnFirst" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/promethee$Test.coverage" NAME="Test Coverage Results" MODIFIED="1586852306296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/promethee/tests" />
   </component>
 </project>

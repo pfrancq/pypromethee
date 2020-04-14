@@ -76,7 +76,7 @@ class CriterionSolutionValue:
 # ----------------------------------------------------------------------------------------------------------------------
 class KernelCriterion:
     """
-    This class represents a given criterion defined by a type and a set of values for each solutions.
+    This class represents a given criterion defined by a criterion and a set of values for each solutions.
 
     |
 
@@ -133,18 +133,18 @@ class KernelCriterion:
 
         if self.criterion.normalized:
             # Compute minimum and maximum values
-            min = max = self.values[0].value
+            min_value = max_value = self.values[0].value
             for i in range(1, self.nb_solutions):
-                if max < self.values[i].value:
-                    max = self.values[i].value
-                if min > self.values[i].value:
-                    min = self.values[i].value
-            diff = max - min
+                if max_value < self.values[i].value:
+                    max_value = self.values[i].value
+                if min_value > self.values[i].value:
+                    min_value = self.values[i].value
+            diff = max_value - min_value
 
             # Normalize
             if diff != 0.0:
                 for i in range(0, self.nb_solutions):
-                    self.values[i].used_value = (self.values[i].value - min) / diff
+                    self.values[i].used_value = (self.values[i].value - min_value) / diff
             else:
                 # All values identical -> Set them to 1.0
                 for i in range(0, self.nb_solutions):
